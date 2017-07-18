@@ -1,3 +1,5 @@
+(function () {
+"use strict";
 var TIMEOUT_IN_SECS = 3 * 60;
 var TEMPLATE = '<h1><span id="timer-minutes">00</span>:<span id="timer-seconds">00</span></h1>';
 
@@ -31,3 +33,4 @@ function displayTimer(){
   document.getElementById('timer-seconds').innerHTML = padZero(seconds);
 }
 setInterval(displayTimer, 300);
+}());
