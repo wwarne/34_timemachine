@@ -10,9 +10,9 @@ Open configuration of [cjs](https://chrome.google.com/webstore/detail/custom-jav
 
 ## How it's work
 After enabling this JS code will show a timer at top-left corner of the webpage. 
-After timer will reach zero and every 30 second after that there will be shown some motivating quotes to help you get back to work. 
+After timer will reach zero and every 30 second after that there will be shown some motivating quotes in Russian to help you get back to work. 
 
-##Development
+## Development
 For faster development you can use JS code hosted on localhost. Simple web server can be used for that, run:
 
 ```bash
