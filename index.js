@@ -45,9 +45,9 @@ function displayTimer(){
   timerSeconds.innerHTML = padZero(seconds);
   if (secsLeft  === 0 && secsGone % 30 === 0) {
       timerParent.setAttribute("style", "color: crimson;");
-      alert('A wise man said: ' + QUOTES[Math.floor(Math.random() * QUOTES.length)]);
+      alert(QUOTES[Math.floor(Math.random() * QUOTES.length)]);
     }
 }
-
 setInterval(displayTimer, 300);
+
 }());
