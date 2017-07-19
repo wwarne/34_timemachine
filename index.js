@@ -2,14 +2,16 @@
 "use strict";
 var TIMEOUT_IN_SECS = 3 * 60;
 var TEMPLATE = '<h1><span id="timer-minutes">00</span>:<span id="timer-seconds">00</span></h1>';
-var QUOTES = ["Opportunity is missed by most people because it is dressed in overalls and looks like work. LET'S WORK!",
-    "It seems the harder I work, the more luck I have.",
-    "It is the working man who is the happy man. It is the idle man who is the miserable man.",
-    "The secret of getting ahead is getting started.",
-    "Even if you fall on your face, you’re still moving forward",
-    "A dream doesn’t become reality through magic; it takes sweat, determination and hard work.",
-    "Embrace the pain to inherit the gain."
-];
+var QUOTES = ["Еще не все колеса изобретены: мир слишком удивителен, чтобы сидеть сложа руки.",
+    "Работа — лучшее лекарство от всех бед.",
+    "Чем упорнее вы работаете, тем удачливее вы становитесь.",
+    "Большинство людей упускают появившуюся возможность. Потому что она бывает одета в комбинезон и с виду напоминает работу.",
+    "Отсутствие времени – это не оправдание.",
+    "Великие дела нужно совершать , а не обдумывать их бесконечно.",
+    "Наш большой недостаток в том, что мы слишком быстро опускаем руки. Наиболее верный путь к успеху – все время пробовать еще один раз.",
+    "Просыпаясь утром, спроси себя: «Что я должен сделать?» Вечером, прежде чем заснуть: «Что я сделал?».",
+    "Любое достижение начинается с решения попробовать.",
+    "Дисциплина — это решение делать то, чего очень не хочется делать, чтобы достичь того, чего очень хочется достичь."];
 // adds HTML tag to current page
 var timerContainer = document.createElement('div');
 timerContainer.setAttribute("style", "position: fixed; top: 50px; left: 60px; z-index: 1;");
