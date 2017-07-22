@@ -34,18 +34,24 @@ var timerMinutes = document.getElementById('timer-minutes');
 var timerSeconds = document.getElementById('timer-seconds');
 var timerParent = document.getElementById('timer-minutes').parentNode;
 
+var alertOnStart = timestampOnStart;
+
 function displayTimer(){
   var currentTimestamp = getTimestampInSecs();
   var secsGone = currentTimestamp - timestampOnStart;
   var secsLeft = Math.max(TIMEOUT_IN_SECS - secsGone, 0);
 
+  var fromLastAlert = currentTimestamp - alertOnStart;
+
   var minutes = Math.floor(secsLeft / 60);
   var seconds = secsLeft - minutes * 60;
   timerMinutes.innerHTML = padZero(minutes);
   timerSeconds.innerHTML = padZero(seconds);
-  if (secsLeft  === 0 && secsGone % 30 === 0) {
+  if (secsLeft  === 0 && fromLastAlert !== 0 && fromLastAlert % 30 === 0) {
       timerParent.setAttribute("style", "color: crimson;");
       alert(QUOTES[Math.floor(Math.random() * QUOTES.length)]);
+      // After closing modal alert we need to wait 30 seconds before throw the new alert().
+      alertOnStart = getTimestampInSecs();
     }
 }
 setInterval(displayTimer, 300);
