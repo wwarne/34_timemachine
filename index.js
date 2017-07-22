@@ -14,7 +14,7 @@ var QUOTES = ["Еще не все колеса изобретены: мир сл
     "Дисциплина — это решение делать то, чего очень не хочется делать, чтобы достичь того, чего очень хочется достичь."];
 // adds HTML tag to current page
 var timerContainer = document.createElement('div');
-timerContainer.setAttribute("style", "position: fixed; top: 50px; left: 60px; z-index: 1;");
+timerContainer.setAttribute("style", "position: fixed; top: 50px; left: 60px; z-index: 100; padding: 10px; border: 1px solid #444851; background-color: rgba(255, 255, 255, 0.8);");
 var bodyTag = document.body;
 bodyTag.insertBefore(timerContainer, bodyTag.firstChild);
 timerContainer.innerHTML = TEMPLATE;
