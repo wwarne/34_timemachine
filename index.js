@@ -29,12 +29,9 @@ function padZero(number){
 }
 
 var timestampOnStart = getTimestampInSecs();
-
 var timerMinutes = document.getElementById('timer-minutes');
 var timerSeconds = document.getElementById('timer-seconds');
 var timerParent = document.getElementById('timer-minutes').parentNode;
-
-
 
 function displayTimer(){
   var currentTimestamp = getTimestampInSecs();
@@ -49,15 +46,15 @@ function displayTimer(){
       timerParent.setAttribute("style", "color: crimson;");
     }
 }
-setInterval(displayTimer, 300);
-// After timeout start to show messages
-setTimeout(displayMessage, TIMEOUT_IN_SECS * 1000);
 
 function displayMessage() {
     alert(QUOTES[Math.floor(Math.random() * QUOTES.length)]);
-    // Show next message after 30 seconds.
+    // Show new message every 30 seconds.
     setTimeout(displayMessage, 30000);
 }
 
+setInterval(displayTimer, 300);
+// After timeout start showing messages
+setTimeout(displayMessage, TIMEOUT_IN_SECS * 1000);
 
 }());
